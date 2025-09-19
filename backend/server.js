@@ -14,7 +14,7 @@ const authRouter = require('./routes/auth')
 app.use('/auth',authRouter)
 
 
-const uri=process.env.MONOGODB_URI|| 'mongodb://localhost:27027/banking-app'
+const uri=process.env.MONOGODB_URI || 'mongodb://localhost:27017/ecommerce'
 mongoose.connect(uri).then(()=> console.log('MongoDB connected..'))
 .catch(err=>console.error(err))
 
