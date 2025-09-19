@@ -14,7 +14,7 @@ const authRouter = require('./routes/auth')
 app.use('/auth',authRouter)
 
 
-const uri=process.env.MONOGODB_URI
+const uri = process.env.MONGODB_URI
 mongoose.connect(uri).then(()=> console.log('MongoDB connected..'))
 .catch(err=>console.error(err))
 
