@@ -10,6 +10,9 @@ const port=process.env.PORT || 3000
 app.use(cors())
 app.use(express.json())
 
+const authRouter = require('./routes/auth')
+app.use('/auth',authRouter)
+
 
 const uri=process.env.MONOGODB_URI|| 'mongodb://localhost:27027/banking-app'
 mongoose.connect(uri).then(()=> console.log('MongoDB connected..'))
